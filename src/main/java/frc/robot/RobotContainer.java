@@ -12,8 +12,8 @@ import frc.robot.subsystems.Drivetrain;
 public class RobotContainer {
   Joystick lefJoystick = new Joystick(0);
   Joystick rightJoystick = new Joystick(1);
-  JoystickButton raiseArmBtn = new JoystickButton(lefJoystick, 1);
-  JoystickButton lowerArmBtn = new JoystickButton(rightJoystick, 1);
+  JoystickButton raiseArmBtn = new JoystickButton(lefJoystick, 2);
+  JoystickButton lowerArmBtn = new JoystickButton(rightJoystick, 2);
 
   Drivetrain drivetrain = new Drivetrain();
   Arm arm = new Arm();
@@ -24,7 +24,7 @@ public class RobotContainer {
   }
 
   private void configureButtonBindings() {
-    raiseArmBtn.whenHeld(new MoveArm(arm,0.5));
+    raiseArmBtn.whenHeld(new MoveArm(arm, 0.5));
     lowerArmBtn.whenHeld(new MoveArm(arm, -0.5));
   }
 

@@ -11,6 +11,7 @@ public class Drivetrain extends SubsystemBase {
     public Drivetrain() {
         left = new Victor(0);
         right = new Victor(1);
+        left.setInverted(true);
     }
 
     public void drive(double leftSpeed, double rightSpeed) {
